@@ -1,0 +1,14 @@
+# Extensoes ignoradas
+*.log
+*.bat
+*.xlsx
+*.xlsm
+*.xlsb
+*.xls
+*.csv
+*.txt
+
+
+#Outros / Re-Forçar
+Auto_Commit.bat
+Auto_Commit.bat
