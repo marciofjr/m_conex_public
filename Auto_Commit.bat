@@ -1,7 +1,9 @@
 REM :: Apenas adiciona arquivos rastreados
-git add -u
+
 
 git rm --cached .gitignore.txt
+
+git add -u
 
 REM Confirme todos os seus arquivos adicionados
 git commit -m marciao
