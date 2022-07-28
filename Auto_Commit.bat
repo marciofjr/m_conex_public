@@ -7,6 +7,7 @@ git add -u
 
 REM Confirme todos os seus arquivos adicionados
 git commit -m marciao
+REM git commit -a
 
 REM :: Branch (ou seja, master)
 git push origin master 
