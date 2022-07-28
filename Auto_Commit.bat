@@ -2,6 +2,9 @@ REM :: Apenas adiciona arquivos rastreados
 
 
 git rm --cached .gitignore.txt
+git add .
+git commit -m "fixed untracked files"
+
 
 git add -u
 
