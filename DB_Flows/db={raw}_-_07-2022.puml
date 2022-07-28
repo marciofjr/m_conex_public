@@ -1,0 +1,2115 @@
+class aav_lives {
+	+ liveid :: varchar
+	+ livetitle :: varchar
+	+ liveexternalid :: varchar
+	+ startat :: varchar
+	+ endat :: varchar
+	+ participantusername :: varchar
+	+ ssoid :: varchar
+	+ ispresent :: varchar
+	+ role :: varchar
+	+ ismeetinghost :: varchar
+	+ participantclasses :: varchar
+	+ events :: varchar
+	+ duration :: varchar
+} 
+class base_squad {
+	+ cnpj :: varchar
+	+ cnpj_pedido :: varchar
+	+ customer_group :: varchar
+	+ cnx_escola :: varchar
+	+ grupo :: varchar
+	+ nome_fantasia :: varchar
+	+ squad :: varchar
+} 
+class fin_dynamics_clientes {
+	+ conta :: varchar
+	+ organizacao :: varchar
+	+ grupo_clientes :: varchar
+	+ cnpj_cpf :: varchar
+	+ criado_por :: varchar
+	+ data_criacao :: varchar
+} 
+class fin_dynamics_invoices_closed {
+	+ id {id_fin_dynamics_invoices_closed} :: varchar
+	+ customertransactionsclosedlist :: Array_04
+} 
+class fin_dynamics_invoices_open {
+	+ id {id_fin_dynamics_invoices_open} :: varchar
+	+ customertransactionslist :: Array_06
+} 
+class jira_issue {
+	+ startat :: bigint
+	+ maxresults :: bigint
+	+ total :: bigint
+	+ issues :: Array_03
+} 
+class lex_accountuserclients {
+	+ id {id_lex_accountuserclients} :: varchar
+	+ userid :: varchar
+	+ clientid :: bigint
+	+ tenantid :: varchar
+	+ licenceid :: varchar
+	+ groupid :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ profileid :: varchar
+} 
+class lex_brand {
+	+ id {id_lex_brand} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ code :: bigint
+	+ name :: varchar
+	+ initials :: varchar
+	+ urlimage :: varchar
+} 
+class lex_classlicense {
+	+ id {id_lex_classlicense} :: varchar
+	+ classid :: varchar
+	+ licenseid :: varchar
+	+ createddate :: timestamp
+	+ createduserid :: varchar
+	+ updateddate :: timestamp
+	+ updateduserid :: varchar
+	+ statustype :: bigint
+	+ actiontype :: bigint
+} 
+class lex_clients {
+	+ id {id_lex_clients} :: bigint
+	+ enabled :: boolean
+	+ clientid :: varchar
+	+ protocoltype :: varchar
+	+ requireclientsecret :: boolean
+	+ clientname :: varchar
+	+ description :: varchar
+	+ clienturi :: varchar
+	+ logouri :: varchar
+	+ requireconsent :: boolean
+	+ allowrememberconsent :: boolean
+	+ alwaysincludeuserclaimsinidtoken :: boolean
+	+ requirepkce :: boolean
+	+ allowplaintextpkce :: boolean
+	+ allowaccesstokensviabrowser :: boolean
+	+ frontchannellogouturi :: varchar
+	+ frontchannellogoutsessionrequired :: boolean
+	+ backchannellogouturi :: varchar
+	+ backchannellogoutsessionrequired :: boolean
+	+ allowofflineaccess :: boolean
+	+ identitytokenlifetime :: bigint
+	+ accesstokenlifetime :: bigint
+	+ authorizationcodelifetime :: bigint
+	+ consentlifetime :: bigint
+	+ absoluterefreshtokenlifetime :: bigint
+	+ slidingrefreshtokenlifetime :: bigint
+	+ refreshtokenusage :: bigint
+	+ updateaccesstokenclaimsonrefresh :: boolean
+	+ refreshtokenexpiration :: bigint
+	+ accesstokentype :: bigint
+	+ enablelocallogin :: boolean
+	+ includejwtid :: boolean
+	+ alwayssendclientclaims :: boolean
+	+ clientclaimsprefix :: varchar
+	+ pairwisesubjectsalt :: varchar
+	+ created :: timestamp
+	+ updated :: timestamp
+	+ lastaccessed :: timestamp
+	+ userssolifetime :: bigint
+	+ usercodetype :: varchar
+	+ devicecodelifetime :: bigint
+	+ noneditable :: boolean
+	+ showproduct :: boolean
+	+ integrated :: boolean
+	+ notintegratedmsg :: varchar
+	+ productid :: varchar
+	+ displayexplanatorymsg :: boolean
+	+ explanatorymsg :: varchar
+} 
+class lex_combo {
+	+ id {id_lex_combo} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ code :: varchar
+	+ name :: varchar
+	+ brandid :: varchar
+} 
+class lex_comboproduct {
+	+ id {id_lex_comboproduct} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ comboid :: varchar
+	+ productid :: varchar
+} 
+class lex_course {
+	+ id {id_lex_course} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ schoolid :: varchar
+	+ publishedstatusdate :: timestamp
+	+ referenceid :: varchar
+	+ name :: varchar
+	+ description :: varchar
+	+ status :: tinyint
+	+ schoolyear :: bigint
+} 
+class lex_enrollment {
+	+ id {id_lex_enrollment} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ courseid :: varchar
+	+ studentid :: varchar
+	+ status :: tinyint
+	+ coursereferenceid :: varchar
+	+ schoolid :: varchar
+} 
+class lex_group {
+	+ id {id_lex_group} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ schoolid :: varchar
+	+ publishedstatusdate :: timestamp
+	+ referenceid :: varchar
+	+ name :: varchar
+	+ grouptypeid :: tinyint
+	+ description :: varchar
+	+ status :: tinyint
+	+ schoolyear :: bigint
+	+ courseid :: varchar
+} 
+class lex_grouptag {
+	+ id {id_lex_grouptag} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ groupid :: varchar
+	+ tagid :: varchar
+} 
+class lex_grouptype {
+	+ id {id_lex_grouptype} :: bigint
+	+ name :: varchar
+	+ description :: varchar
+} 
+class lex_groupuser {
+	+ id {id_lex_groupuser} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ groupid :: varchar
+	+ userid :: varchar
+	+ profileid :: varchar
+	+ deletedate :: timestamp
+} 
+class lex_licence {
+	+ id {id_lex_licence} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ name :: varchar
+	+ comboid :: varchar
+	+ tenantid :: varchar
+	+ startdate :: varchar
+	+ enddate :: varchar
+	+ iseffective :: bigint
+	+ releasefortenant :: bigint
+} 
+class lex_log_user_login {
+	+ id {id_lex_log_user_login} :: bigint
+	+ created_at :: timestamp
+	+ ip :: varchar
+	+ success :: varbinary
+	+ msg :: varchar
+	+ user_id :: varchar
+	+ slug :: varchar
+	+ accessed_by_temporary_password :: varbinary
+	+ client_id :: varchar
+	+ client_from :: varchar
+	+ account_id :: varchar
+	+ data_partition :: date
+} 
+class lex_log_user_redirect {
+	+ id {id_lex_log_user_redirect} :: bigint
+	+ created_at :: timestamp
+	+ ip :: varchar
+	+ success :: varbinary
+	+ msg :: varchar
+	+ user_id :: varchar
+	+ user_from :: varchar
+	+ client_id :: varchar
+	+ client_from :: varchar
+	+ tenant_id :: varchar
+	+ accessed_by_temporary_password :: varbinary
+	+ account_id :: varchar
+	+ data_partition :: date
+} 
+class lex_logmigrationaccount {
+	+ id {id_lex_logmigrationaccount} :: varchar
+	+ createddate :: timestamp
+	+ tenantid :: varchar
+	+ hublegacylogin :: varchar
+	+ lexdocumentcpf :: varchar
+	+ legacyuserid :: varchar
+} 
+class lex_loguserlogin {
+	+ id {id_lex_loguserlogin} :: varchar
+	+ createdate :: timestamp
+	+ userid :: varchar
+	+ login :: varchar
+	+ slug :: varchar
+	+ productid :: varchar
+	+ success :: boolean
+	+ failedmsg :: varchar
+	+ loginfrom :: varchar
+	+ ip :: varchar
+	+ clientid :: varchar
+	+ accessedbytemporarypassword :: varbinary
+	+ data_partition :: date
+} 
+class lex_loguserredirect {
+	+ id {id_lex_loguserredirect} :: varchar
+	+ createdate :: timestamp
+	+ userid :: varchar
+	+ productid :: varchar
+	+ profileid :: varchar
+	+ ip :: varchar
+	+ clientid :: varchar
+	+ tenantid :: varchar
+	+ data_partition :: date
+} 
+class lex_migrationdependent {
+	+ sponsorid :: varchar
+	+ dependentid :: varchar
+	+ status :: tinyint
+	+ confirmationdate :: timestamp
+} 
+class lex_migrationsponsor {
+	+ sponsorid :: varchar
+	+ status :: tinyint
+	+ confirmationdate :: timestamp
+} 
+class lex_migrationstatus {
+	+ id {id_lex_migrationstatus} :: tinyint
+	+ description :: varchar
+} 
+class lex_product {
+	+ id {id_lex_product} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ code :: bigint
+	+ name :: varchar
+	+ description :: varchar
+	+ urlimage :: varchar
+	+ primarycolor :: varchar
+	+ enablelexsso :: boolean
+} 
+class lex_productprofile {
+	+ id {id_lex_productprofile} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ profileid :: varchar
+	+ productid :: varchar
+	+ accesspermission :: boolean
+} 
+class lex_profile {
+	+ id {id_lex_profile} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ referenceid :: varchar
+	+ name :: varchar
+	+ description :: varchar
+	+ code :: tinyint
+	+ type :: varchar
+} 
+class lex_school {
+	+ id {id_lex_school} :: varchar
+	+ createdate :: varchar
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ referenceid :: varchar
+	+ fantasyname :: varchar
+	+ corporationname :: varchar
+	+ documentcnpj :: varchar
+	+ schooltype :: tinyint
+	+ tenantid :: varchar
+	+ zip :: varchar
+	+ city :: varchar
+	+ state :: varchar
+	+ address :: varchar
+	+ district :: varchar
+	+ email :: varchar
+	+ phonenumber :: varchar
+	+ active :: varchar
+	+ licenseservicematchtype :: tinyint
+	+ stateregistration :: varchar
+	+ exemptstateregistration :: varchar
+	+ cityregistration :: varchar
+	+ lexpaymodule :: boolean
+	+ lexpaymoduleenabledat :: timestamp
+	+ payschoolid :: varchar
+} 
+class lex_schooladdress {
+	+ id {id_lex_schooladdress} :: varchar
+	+ schoolid :: varchar
+	+ schooladdresstypeid :: tinyint
+	+ zip :: varchar
+	+ state :: varchar
+	+ city :: varchar
+	+ address :: varchar
+	+ number :: varchar
+	+ neighborhood :: varchar
+	+ complement :: varchar
+} 
+class lex_schooladdresstype {
+	+ id {id_lex_schooladdresstype} :: tinyint
+	+ name :: varchar
+	+ description :: varchar
+} 
+class lex_schooltag {
+	+ id {id_lex_schooltag} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ schoolid :: varchar
+	+ tagid :: varchar
+} 
+class lex_schooltype {
+	+ id {id_lex_schooltype} :: bigint
+	+ name :: varchar
+	+ description :: varchar
+} 
+class lex_tag {
+	+ id {id_lex_tag} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ tagkey :: varchar
+	+ tagtypeid :: varchar
+	+ tagalias :: varchar
+	+ tagcolor :: varchar
+} 
+class lex_taggroup {
+	+ id {id_lex_taggroup} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ tagchildid :: varchar
+	+ tagparentid :: varchar
+} 
+class lex_tagtype {
+	+ id {id_lex_tagtype} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ tagtypename :: varchar
+	+ active :: boolean
+	+ code :: tinyint
+	+ type :: varchar
+} 
+class lex_tenant {
+	+ id {id_lex_tenant} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ name :: varchar
+	+ alias :: varchar
+	+ referenceid :: varchar
+	+ slug :: varchar
+	+ logourl :: varchar
+	+ changeuserpwd :: varchar
+	+ passworduserchangemessage :: varchar
+	+ sendemail :: boolean
+	+ primarycolor :: varchar
+	+ licenseservicematchtype :: tinyint
+	+ requestuserregistrationupdate :: boolean
+	+ tenantbrandid :: varchar
+	+ schoolidentifierisavailable :: boolean
+} 
+class lex_tenantbrand {
+	+ id {id_lex_tenantbrand} :: varchar
+	+ name :: varchar
+	+ createdate :: timestamp
+	+ updatedate :: timestamp
+	+ fixedkey :: varchar
+	+ helpdeskscript :: varchar
+} 
+class lex_tenantmodules {
+	+ id {id_lex_tenantmodules} :: varchar
+	+ tenantid :: varchar
+	+ modulename :: varchar
+	+ enabled :: boolean
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+} 
+class lex_user {
+	+ id {id_lex_user} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ referenceid :: varchar
+	+ name :: varchar
+	+ birthdate :: timestamp
+	+ email :: varchar
+	+ documentcpf :: varchar
+	+ documentrg :: varchar
+	+ gender :: tinyint
+	+ cellphonenumber :: varchar
+	+ login :: varchar
+	+ password :: varchar
+	+ tenantid :: varchar
+	+ lastlogindate :: timestamp
+	+ status :: boolean
+	+ temporarypassword :: varchar
+	+ temporarypasswordexpirationdate :: timestamp
+	+ temporaryuserid :: varchar
+	+ accountid :: varchar
+	+ updateownerdate :: timestamp
+	+ firstname :: varchar
+	+ lastname :: varchar
+	+ accountlogin :: varchar
+	+ registrationorigin :: tinyint
+} 
+class lex_userparent {
+	+ id {id_lex_userparent} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ userchildid :: varchar
+	+ userparentid :: varchar
+} 
+class lex_userprofile {
+	+ id {id_lex_userprofile} :: varchar
+	+ createdate :: timestamp
+	+ createuserid :: varchar
+	+ updatedate :: timestamp
+	+ updateuserid :: varchar
+	+ userid :: varchar
+	+ profileid :: varchar
+} 
+class lrn_brands {
+	+ id {id_lrn_brands} :: bigint
+	+ name :: varchar
+	+ clientid :: varchar
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ redirect_student_ios :: varchar
+	+ redirect_student_android :: varchar
+	+ redirect_student_web :: varchar
+	+ redirect_teacher_web :: varchar
+	+ redirect_roles_web :: varchar
+	+ clientsecret :: varchar
+} 
+class lrn_careers {
+	+ id {id_lrn_careers} :: bigint
+	+ name :: varchar
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ createdby :: bigint
+	+ updatedby :: bigint
+	+ deletedby :: bigint
+} 
+class lrn_chart {
+	+ id {id_lrn_chart} :: bigint
+	+ name :: varchar
+	+ type :: varchar
+	+ optioncount :: bigint
+	+ mincount :: bigint
+	+ maxcount :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ description :: varchar
+	+ title :: varchar
+	+ ef :: tinyint
+	+ hiderelevanceicon :: tinyint
+} 
+class lrn_chartdegree {
+	+ id {id_lrn_chartdegree} :: bigint
+	+ difficultylevelid :: bigint
+	+ contentamount :: bigint
+	+ extraduration :: bigint
+	+ themeid :: bigint
+	+ chartid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_chartdegreeinstrumenttemplate {
+	+ id {id_lrn_chartdegreeinstrumenttemplate} :: bigint
+	+ instrumenttemplateid :: bigint
+	+ priority :: tinyint
+	+ chartdegreeid :: bigint
+	+ description :: varchar
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ position :: bigint
+	+ weight :: bigint
+} 
+class lrn_chartdegreetask {
+	+ id {id_lrn_chartdegreetask} :: bigint
+	+ position :: bigint
+	+ chartdegreeid :: bigint
+	+ charttaskid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ weight :: bigint
+} 
+class lrn_chartindex {
+	+ id {id_lrn_chartindex} :: bigint
+	+ level :: bigint
+	+ planningtemplatechapterid :: bigint
+	+ planningtemplatedisciplineid :: bigint
+	+ planningtemplateid :: bigint
+	+ chartid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ examid :: bigint
+} 
+class lrn_chartindexoverride {
+	+ id {id_lrn_chartindexoverride} :: bigint
+	+ name :: varchar
+	+ type :: varchar
+	+ formula :: varchar
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ description :: varchar
+	+ min :: bigint
+	+ max :: bigint
+} 
+class lrn_chartoverride {
+	+ id {id_lrn_chartoverride} :: bigint
+	+ position :: bigint
+	+ mincount :: bigint
+	+ maxcount :: bigint
+	+ chartindexoverrideid :: bigint
+	+ chartid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ themeid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_chartsourceexternaloption {
+	+ id {id_lrn_chartsourceexternaloption} :: bigint
+	+ chartsourceexternalid :: bigint
+	+ fieldid :: bigint
+	+ sourceexternalcareerid :: bigint
+	+ name :: varchar
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ examid :: bigint
+} 
+class lrn_chartsourceexternaloptionoverride {
+	+ id {id_lrn_chartsourceexternaloptionoverride} :: bigint
+	+ themeid :: bigint
+	+ chartsourceexternaloptionid :: bigint
+	+ formula :: varchar
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ min :: bigint
+	+ max :: bigint
+} 
+class lrn_classroom {
+	+ id {id_lrn_classroom} :: bigint
+	+ name :: varchar
+	+ externalid :: varchar
+	+ schoolyearid :: bigint
+	+ schoolunitid :: bigint
+	+ schoolgradeid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_dataquality {
+	+ processing_date :: date
+	+ database_name :: varchar
+	+ origin :: varchar
+	+ table_name :: varchar
+	+ quantity :: bigint
+} 
+class lrn_difficultylevel {
+	+ id {id_lrn_difficultylevel} :: bigint
+	+ difficulty :: tinyint
+	+ level :: bigint
+	+ label :: varchar
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+} 
+class lrn_estrutura_escolas {
+	+ tipoescola :: varchar
+	+ nomeescola :: varchar
+	+ nomeunidade :: varchar
+	+ nomesquad :: varchar
+	+ nomedirecao :: varchar
+} 
+class lrn_fonte_referencia {
+	+ id_instrumento :: varchar
+	+ disciplina :: varchar
+	+ questao :: varchar
+	+ tag_bncc :: varchar
+	+ objeto_conhecimento :: varchar
+	+ gabarito :: varchar
+	+ alternativas :: varchar
+	+ conteudo :: varchar
+	+ habilidade_avaliada :: varchar
+} 
+class lrn_grades {
+	+ id {id_lrn_grades} :: bigint
+	+ name :: varchar
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ position :: bigint
+	+ alias :: varchar
+	+ lates_to_miss_count :: bigint
+} 
+class lrn_groups {
+	+ id {id_lrn_groups} :: bigint
+	+ name :: varchar
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ color :: varchar
+} 
+class lrn_id_question_versions {
+	+ id {id_lrn_id_question_versions} :: bigint
+	+ instrument_discipline_id :: bigint
+	+ question_version_id :: bigint
+	+ author_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ estimated_time :: bigint
+	+ difficulty :: bigint
+	+ question_id :: bigint
+	+ question_group_id :: bigint
+	+ annulled :: tinyint
+	+ position :: bigint
+	+ log_id :: bigint
+	+ annulled_reason :: varchar
+	+ log_question_id :: bigint
+	+ weight :: double
+	+ answer :: bigint
+	+ original_id :: bigint
+	+ priority :: bigint
+} 
+class lrn_instrument_disciplines {
+	+ id {id_lrn_instrument_disciplines} :: bigint
+	+ total_questions :: bigint
+	+ questions_count :: bigint
+	+ total_questions_easy :: bigint
+	+ total_questions_medium :: bigint
+	+ total_questions_hard :: bigint
+	+ questions_easy_count :: bigint
+	+ questions_medium_count :: bigint
+	+ questions_hard_count :: bigint
+	+ instrument_id :: bigint
+	+ discipline_id :: bigint
+	+ author_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ estimated_time :: bigint
+	+ planning_discipline_id :: bigint
+	+ application_date :: timestamp
+	+ min_videos :: bigint
+	+ total_questions_min :: bigint
+	+ total_questions_max :: bigint
+	+ cover :: varchar
+	+ video_code :: varchar
+	+ position :: bigint
+	+ document_file_name :: varchar
+	+ document_content_type :: varchar
+	+ document_file_size :: bigint
+	+ document_updated_at :: timestamp
+	+ processing :: tinyint
+	+ document_doc_file_name :: varchar
+	+ document_doc_content_type :: varchar
+	+ document_doc_file_size :: bigint
+	+ document_doc_updated_at :: timestamp
+	+ document_pdf_file_name :: varchar
+	+ document_pdf_content_type :: varchar
+	+ document_pdf_file_size :: bigint
+	+ document_pdf_updated_at :: timestamp
+	+ answer_document_file_name :: varchar
+	+ answer_document_content_type :: varchar
+	+ answer_document_file_size :: bigint
+	+ answer_document_updated_at :: timestamp
+	+ answer_document_doc_file_name :: varchar
+	+ answer_document_doc_content_type :: varchar
+	+ answer_document_doc_file_size :: bigint
+	+ answer_document_doc_updated_at :: timestamp
+	+ answer_document_pdf_file_name :: varchar
+	+ answer_document_pdf_content_type :: varchar
+	+ answer_document_pdf_file_size :: bigint
+	+ answer_document_pdf_updated_at :: timestamp
+	+ disabled :: tinyint
+	+ weight :: double
+	+ group_id :: bigint
+	+ application_end_date :: timestamp
+	+ expected_time :: bigint
+	+ suffix :: varchar
+	+ deleted_at :: timestamp
+	+ deleted_by :: bigint
+	+ original_id :: bigint
+} 
+class lrn_instrument_disciplines_elective_groups {
+	+ instrument_elective_group_id :: bigint
+	+ instrument_discipline_id :: bigint
+} 
+class lrn_instrument_qv_positions {
+	+ id {id_lrn_instrument_qv_positions} :: bigint
+	+ position :: bigint
+	+ instrument_discipline_question_version_id :: bigint
+	+ instrument_positions_group_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ original_id :: bigint
+} 
+class lrn_instruments {
+	+ id {id_lrn_instruments} :: bigint
+	+ name :: varchar
+	+ abbreviation :: varchar
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+	+ template_id :: bigint
+	+ school_year_id :: bigint
+	+ origin_instrument_id :: bigint
+	+ user_id :: bigint
+} 
+class lrn_instruments_application_configurations {
+	+ id {id_lrn_instruments_application_configurations} :: bigint
+	+ name :: varchar
+	+ required :: tinyint
+	+ position :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+	+ application_type_id :: bigint
+	+ application_option_id :: bigint
+} 
+class lrn_instruments_application_values {
+	+ id {id_lrn_instruments_application_values} :: bigint
+	+ value :: varchar
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+	+ application_id :: bigint
+	+ application_configuration_id :: bigint
+} 
+class lrn_instruments_applications {
+	+ id {id_lrn_instruments_applications} :: bigint
+	+ name :: varchar
+	+ show_title :: tinyint
+	+ single_application :: tinyint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+	+ template_id :: bigint
+	+ application_type_id :: bigint
+} 
+class lrn_instruments_elective_question_groups {
+	+ id {id_lrn_instruments_elective_question_groups} :: bigint
+	+ elective_id :: bigint
+	+ question_group_id :: bigint
+	+ deleted_at :: timestamp
+} 
+class lrn_instruments_electives {
+	+ id {id_lrn_instruments_electives} :: bigint
+	+ name :: varchar
+	+ instrument_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+} 
+class lrn_instruments_instrument_grades {
+	+ id {id_lrn_instruments_instrument_grades} :: bigint
+	+ instrument_id :: bigint
+	+ grade_id :: bigint
+} 
+class lrn_instruments_instrument_questions {
+	+ id {id_lrn_instruments_instrument_questions} :: bigint
+	+ added_by :: bigint
+	+ author :: varchar
+	+ added_at :: timestamp
+	+ position :: bigint
+	+ priority :: tinyint
+	+ question_version_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+	+ question_group_id :: bigint
+} 
+class lrn_instruments_question_groups {
+	+ id {id_lrn_instruments_question_groups} :: bigint
+	+ name :: varchar
+	+ position :: bigint
+	+ min_videos :: bigint
+	+ min_questions :: bigint
+	+ max_questions :: bigint
+	+ instrument_id :: bigint
+	+ theme_id :: bigint
+	+ group_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+} 
+class lrn_instruments_template_response_types {
+	+ id {id_lrn_instruments_template_response_types} :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+	+ response_type_id :: bigint
+	+ template_id :: bigint
+} 
+class lrn_instruments_templates {
+	+ id {id_lrn_instruments_templates} :: bigint
+	+ author_id :: bigint
+	+ name :: varchar
+	+ status :: tinyint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ deleted_at :: timestamp
+} 
+class lrn_it_question_groups {
+	+ instrument_template_id :: bigint
+	+ instrument_question_group_id :: bigint
+	+ id {id_lrn_it_question_groups} :: bigint
+	+ position :: bigint
+} 
+class lrn_itc_configurations {
+	+ instrument_template_configuration_id :: bigint
+	+ instrument_template_id :: bigint
+} 
+class lrn_matriz_capitulo {
+	+ escola :: varchar
+	+ mes :: varchar
+	+ serie :: varchar
+	+ capitulo :: varchar
+	+ disciplina :: varchar
+	+ chave :: varchar
+} 
+class lrn_planning {
+	+ id {id_lrn_planning} :: bigint
+	+ name :: varchar
+	+ schoolyearid :: bigint
+	+ disabledid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ chartid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ brandid :: bigint
+} 
+class lrn_planningapplication {
+	+ id {id_lrn_planningapplication} :: bigint
+	+ planningchapterid :: bigint
+	+ planningtemplateapplicationid :: bigint
+	+ planningid :: bigint
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ mindate :: timestamp
+	+ maxdate :: timestamp
+	+ invalid :: tinyint
+	+ planningtemplateplanningid :: bigint
+	+ deletedbycopy :: bigint
+} 
+class lrn_planningchapter {
+	+ id {id_lrn_planningchapter} :: bigint
+	+ planningtemplatechapterid :: bigint
+	+ planningid :: bigint
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ mindate :: timestamp
+	+ maxdate :: timestamp
+	+ invalid :: tinyint
+	+ planningtemplateplanningid :: bigint
+} 
+class lrn_planningtemplate {
+	+ id {id_lrn_planningtemplate} :: bigint
+	+ name :: varchar
+	+ schoolyearid :: bigint
+	+ disabledid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ chartid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ version :: bigint
+} 
+class lrn_planningtemplateapplication {
+	+ id {id_lrn_planningtemplateapplication} :: bigint
+	+ mindate :: timestamp
+	+ maxdate :: timestamp
+	+ instrumentquestiongroupid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+	+ planningtemplateinstrumentid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_planningtemplateapplicationdiscipline {
+	+ id {id_lrn_planningtemplateapplicationdiscipline} :: bigint
+	+ planningtemplatedisciplineid :: bigint
+	+ planningtemplateapplicationid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ createdby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_planningtemplatechapter {
+	+ id {id_lrn_planningtemplatechapter} :: bigint
+	+ name :: varchar
+	+ planningtemplateid :: bigint
+	+ mindate :: timestamp
+	+ maxdate :: timestamp
+	+ number :: bigint
+	+ createdby :: bigint
+	+ updatedby :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ adminid :: bigint
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_planningtemplatediscipline {
+	+ id {id_lrn_planningtemplatediscipline} :: bigint
+	+ name :: varchar
+	+ themeid :: bigint
+	+ planningtemplateid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ shortname :: varchar
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ groupid :: bigint
+} 
+class lrn_planningtemplatedisciplineplanning {
+	+ id {id_lrn_planningtemplatedisciplineplanning} :: bigint
+	+ planningdisciplineid :: bigint
+	+ planningtemplatedisciplineid :: bigint
+	+ planningtemplateplanningid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ createdby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ updatedby :: bigint
+} 
+class lrn_planningtemplateinstrument {
+	+ id {id_lrn_planningtemplateinstrument} :: bigint
+	+ planningtemplatechapterid :: bigint
+	+ instrumentid :: bigint
+	+ instrumenttemplateapplicationid :: bigint
+	+ planningtemplateid :: bigint
+	+ createdat :: timestamp
+	+ createdby :: bigint
+	+ updatedat :: timestamp
+	+ updatedby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_planningtemplateplanning {
+	+ id {id_lrn_planningtemplateplanning} :: bigint
+	+ planningid :: bigint
+	+ planningtemplateid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ createdby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ version :: bigint
+} 
+class lrn_profiles {
+	+ id {id_lrn_profiles} :: bigint
+	+ firstname :: varchar
+	+ lastname :: varchar
+	+ userid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_question_versions {
+	+ id {id_lrn_question_versions} :: bigint
+	+ question_id :: bigint
+	+ author_id :: bigint
+	+ adaptation_author_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ question_status_id :: bigint
+	+ response_type_id :: bigint
+	+ explanation :: varchar
+	+ difficulty :: bigint
+	+ estimated_time :: bigint
+	+ is_original :: tinyint
+	+ instruction :: varchar
+	+ answer :: bigint
+	+ reason :: varchar
+	+ video_code :: varchar
+	+ has_pendency :: tinyint
+	+ pending_video_id :: bigint
+	+ processing :: tinyint
+	+ deleted_at :: timestamp
+	+ deleted_by :: bigint
+	+ instruction_justify :: varchar
+} 
+class lrn_registration_chart_overrides {
+	+ id {id_lrn_registration_chart_overrides} :: bigint
+	+ themeid :: bigint
+	+ groupid :: bigint
+	+ planningdisciplineid :: bigint
+	+ studentregistrationid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ chartoverrideid :: bigint
+} 
+class lrn_registration_charts {
+	+ id {id_lrn_registration_charts} :: bigint
+	+ chartsourceexternaloptionid :: bigint
+	+ position :: bigint
+	+ studentplanningchartid :: bigint
+	+ studentregistrationid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ chartid :: bigint
+} 
+class lrn_registration_tasks {
+	+ id {id_lrn_registration_tasks} :: bigint
+	+ charttaskid :: bigint
+	+ studentplanningchartid :: bigint
+	+ studentplanningchartchapterid :: bigint
+	+ studentplanningchartdisciplineid :: bigint
+	+ studentregistrationid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ planningtemplatechapterid :: bigint
+	+ planningtemplatedisciplineid :: bigint
+	+ chartid :: bigint
+} 
+class lrn_response_card_elective_groups {
+	+ id {id_lrn_response_card_elective_groups} :: bigint
+	+ responsecardid :: bigint
+	+ electivegroupid :: bigint
+	+ electivegroupquestiongroupid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_response_card_items {
+	+ id {id_lrn_response_card_items} :: bigint
+	+ responsecardimageid :: bigint
+	+ questionversioninstructionid :: bigint
+	+ answer :: bigint
+	+ instrumentquestionid :: bigint
+	+ fixedscore :: double
+	+ responsecardid :: bigint
+	+ correctionid :: bigint
+	+ duration :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ score :: bigint
+	+ scoredat :: timestamp
+	+ correctanswer :: bigint
+	+ maxscore :: bigint
+	+ correctat :: timestamp
+	+ correctby :: bigint
+	+ not_archived :: bigint
+} 
+class lrn_response_cards {
+	+ id {id_lrn_response_cards} :: bigint
+	+ score :: bigint
+	+ fixedscore :: double
+	+ duration :: bigint
+	+ finishedat :: timestamp
+	+ planningtemplateapplicationid :: bigint
+	+ positionsgroupid :: bigint
+	+ studentid :: bigint
+	+ registrationid :: bigint
+	+ missed :: tinyint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ externalid :: bigint
+	+ studentplanningapplicationid :: bigint
+	+ maxscore :: bigint
+	+ not_archived :: bigint
+} 
+class lrn_rls_gestor {
+	+ id_gestor :: varchar
+	+ id_escola :: varchar
+	+ email_colaborador :: varchar
+} 
+class lrn_school_roles {
+	+ id {id_lrn_school_roles} :: bigint
+	+ name :: varchar
+	+ schoolid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_school_staffs {
+	+ id {id_lrn_school_staffs} :: bigint
+	+ staffid :: bigint
+	+ schoolid :: bigint
+	+ schoolroleid :: bigint
+	+ userid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_school_students {
+	+ id {id_lrn_school_students} :: bigint
+	+ studentid :: bigint
+	+ schoolid :: bigint
+	+ userid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_school_teachers {
+	+ id {id_lrn_school_teachers} :: bigint
+	+ schoolid :: bigint
+	+ userid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_school_year {
+	+ id {id_lrn_school_year} :: bigint
+	+ year :: varchar
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ alias :: varchar
+} 
+class lrn_school_years {
+	+ id {id_lrn_school_years} :: bigint
+	+ year :: varchar
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ alias :: varchar
+} 
+class lrn_schoolgrade {
+	+ id {id_lrn_schoolgrade} :: bigint
+	+ name :: varchar
+	+ gradeid :: bigint
+	+ externalid :: varchar
+	+ position :: bigint
+	+ latestomiss :: bigint
+	+ schoolid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_schoolplanning {
+	+ id {id_lrn_schoolplanning} :: bigint
+	+ schoolgradeid :: bigint
+	+ planningid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ createdby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+	+ updatedby :: bigint
+	+ planningtemplateplanningid :: bigint
+	+ schoolid :: bigint
+	+ brandid :: bigint
+	+ schoolyearid :: bigint
+} 
+class lrn_schoolplanningdiscipline {
+	+ id {id_lrn_schoolplanningdiscipline} :: bigint
+	+ planningdisciplineid :: bigint
+	+ schoolplanningid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ createdby :: bigint
+	+ adminid :: bigint
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+	+ timesperweek :: bigint
+	+ updatedby :: bigint
+} 
+class lrn_schools {
+	+ id {id_lrn_schools} :: bigint
+	+ name :: varchar
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ lextenantid :: varchar
+} 
+class lrn_schoolunit {
+	+ id {id_lrn_schoolunit} :: bigint
+	+ schoolid :: bigint
+	+ name :: varchar
+	+ cnpj :: varchar
+	+ externalid :: varchar
+	+ address :: varchar
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_simulado_enem_batchload {
+	+ tipo :: varchar
+	+ id_aluno :: varchar
+	+ responsecard_id :: varchar
+	+ id_grupo_atividade :: varchar
+	+ q1 :: varchar
+	+ q2 :: varchar
+	+ q3 :: varchar
+	+ q4 :: varchar
+	+ q5 :: varchar
+	+ q6 :: varchar
+	+ q7 :: varchar
+	+ q8 :: varchar
+	+ q9 :: varchar
+	+ q10 :: varchar
+	+ q11 :: varchar
+	+ q12 :: varchar
+	+ q13 :: varchar
+	+ q14 :: varchar
+	+ q15 :: varchar
+	+ q16 :: varchar
+	+ q17 :: varchar
+	+ q18 :: varchar
+	+ q19 :: varchar
+	+ q20 :: varchar
+	+ q21 :: varchar
+	+ q22 :: varchar
+	+ q23 :: varchar
+	+ q24 :: varchar
+	+ q25 :: varchar
+	+ q26 :: varchar
+	+ q27 :: varchar
+	+ q28 :: varchar
+	+ q29 :: varchar
+	+ q30 :: varchar
+	+ q31 :: varchar
+	+ q32 :: varchar
+	+ q33 :: varchar
+	+ q34 :: varchar
+	+ q35 :: varchar
+	+ q36 :: varchar
+	+ q37 :: varchar
+	+ q38 :: varchar
+	+ q39 :: varchar
+	+ q40 :: varchar
+	+ q41 :: varchar
+	+ q42 :: varchar
+	+ q43 :: varchar
+	+ q44 :: varchar
+	+ q45 :: varchar
+	+ q46 :: varchar
+	+ q47 :: varchar
+	+ q48 :: varchar
+	+ q49 :: varchar
+	+ q50 :: varchar
+	+ q51 :: varchar
+	+ q52 :: varchar
+	+ q53 :: varchar
+	+ q54 :: varchar
+	+ q55 :: varchar
+	+ q56 :: varchar
+	+ q57 :: varchar
+	+ q58 :: varchar
+	+ q59 :: varchar
+	+ q60 :: varchar
+	+ q61 :: varchar
+	+ q62 :: varchar
+	+ q63 :: varchar
+	+ q64 :: varchar
+	+ q65 :: varchar
+	+ q66 :: varchar
+	+ q67 :: varchar
+	+ q68 :: varchar
+	+ q69 :: varchar
+	+ q70 :: varchar
+	+ q71 :: varchar
+	+ q72 :: varchar
+	+ q73 :: varchar
+	+ q74 :: varchar
+	+ q75 :: varchar
+	+ q76 :: varchar
+	+ q77 :: varchar
+	+ q78 :: varchar
+	+ q79 :: varchar
+	+ q80 :: varchar
+	+ q81 :: varchar
+	+ q82 :: varchar
+	+ q83 :: varchar
+	+ q84 :: varchar
+	+ q85 :: varchar
+	+ q86 :: varchar
+	+ q87 :: varchar
+	+ q88 :: varchar
+	+ q89 :: varchar
+	+ q90 :: varchar
+	+ q91 :: varchar
+	+ q92 :: varchar
+	+ q93 :: varchar
+	+ q94 :: varchar
+	+ q95 :: varchar
+	+ q96 :: varchar
+	+ q97 :: varchar
+	+ q98 :: varchar
+	+ q99 :: varchar
+	+ q100 :: varchar
+	+ q101 :: varchar
+	+ q102 :: varchar
+	+ q103 :: varchar
+	+ q104 :: varchar
+	+ q105 :: varchar
+	+ q106 :: varchar
+	+ q107 :: varchar
+	+ q108 :: varchar
+	+ q109 :: varchar
+	+ q110 :: varchar
+	+ q111 :: varchar
+	+ q112 :: varchar
+	+ q113 :: varchar
+	+ q114 :: varchar
+	+ q115 :: varchar
+	+ q116 :: varchar
+	+ q117 :: varchar
+	+ q118 :: varchar
+	+ q119 :: varchar
+	+ q120 :: varchar
+	+ q121 :: varchar
+	+ q122 :: varchar
+	+ q123 :: varchar
+	+ q124 :: varchar
+	+ q125 :: varchar
+	+ q126 :: varchar
+	+ q127 :: varchar
+	+ q128 :: varchar
+	+ q129 :: varchar
+	+ q130 :: varchar
+	+ q131 :: varchar
+	+ q132 :: varchar
+	+ q133 :: varchar
+	+ q134 :: varchar
+	+ q135 :: varchar
+	+ q136 :: varchar
+	+ q137 :: varchar
+	+ q138 :: varchar
+	+ q139 :: varchar
+	+ q140 :: varchar
+	+ q141 :: varchar
+	+ q142 :: varchar
+	+ q143 :: varchar
+	+ q144 :: varchar
+	+ q145 :: varchar
+	+ q146 :: varchar
+	+ q147 :: varchar
+	+ q148 :: varchar
+	+ q149 :: varchar
+	+ q150 :: varchar
+	+ q151 :: varchar
+	+ q152 :: varchar
+	+ q153 :: varchar
+	+ q154 :: varchar
+	+ q155 :: varchar
+	+ q156 :: varchar
+	+ q157 :: varchar
+	+ q158 :: varchar
+	+ q159 :: varchar
+	+ q160 :: varchar
+	+ q161 :: varchar
+	+ q162 :: varchar
+	+ q163 :: varchar
+	+ q164 :: varchar
+	+ q165 :: varchar
+	+ q166 :: varchar
+	+ q167 :: varchar
+	+ q168 :: varchar
+	+ q169 :: varchar
+	+ q170 :: varchar
+	+ q171 :: varchar
+	+ q172 :: varchar
+	+ q173 :: varchar
+	+ q174 :: varchar
+	+ q175 :: varchar
+	+ q176 :: varchar
+	+ q177 :: varchar
+	+ q178 :: varchar
+	+ q179 :: varchar
+	+ q180 :: varchar
+} 
+class lrn_simulado_enem_batchload_classificacoes {
+	+ id_aluno :: varchar
+	+ id_escola :: varchar
+	+ id_grupo_atividade :: varchar
+	+ numero_janela_aplicacao_atividade :: varchar
+	+ tri_objetivas :: varchar
+	+ tri_areas :: varchar
+	+ classificacao_objetivas_escola :: varchar
+	+ classificacao_objetivas_rede :: varchar
+	+ classificacao_objetivas_geral :: varchar
+	+ classificacao_areas_escola :: varchar
+	+ classificacao_areas_rede :: varchar
+	+ classificacao_areas_geral :: varchar
+} 
+class lrn_simulado_enem_batchload_redacao {
+	+ id_lex :: varchar
+	+ id_escola :: varchar
+	+ id_disciplina :: varchar
+	+ id_area_conhecimento :: varchar
+	+ id_status_redacao :: varchar
+	+ id_redacao_aluno :: varchar
+	+ numero_janela_aplicacao_atividade :: varchar
+	+ url_redacao :: varchar
+	+ id_atividade :: varchar
+	+ c1 :: varchar
+	+ c2 :: varchar
+	+ c3 :: varchar
+	+ c4 :: varchar
+	+ c5 :: varchar
+} 
+class lrn_simulado_enem_janela_aplicacao {
+	+ id_atividade :: varchar
+	+ nome_atividade :: varchar
+	+ tipo_atividade :: varchar
+	+ grupo_atividade :: varchar
+	+ data_inicio_atividade :: varchar
+	+ dias_janela_aplicacao_atividade :: varchar
+	+ data_limite_entrega_atividade :: varchar
+	+ numero_janela_aplicacao_atividade :: varchar
+} 
+class lrn_simulado_enem_notas_corte_sisu {
+	+ ano_letivo :: varchar
+	+ edicao_ano_letivo :: varchar
+	+ codigo_instituicao_ensino :: varchar
+	+ nome_instituicao_ensino :: varchar
+	+ sigla_instituicao_ensino :: varchar
+	+ organizacao_academica :: varchar
+	+ categoria_administrativa :: varchar
+	+ campus_curso :: varchar
+	+ municipio_campus_curso :: varchar
+	+ sigla_uf_campus :: varchar
+	+ regiao_campus :: varchar
+	+ codigo_curso_instituicao_ensino :: varchar
+	+ nome_curso :: varchar
+	+ grau_curso :: varchar
+	+ turno_curso :: varchar
+	+ tipo_modalidade_curso :: varchar
+	+ modalidade_curso :: varchar
+	+ percentual_bonus :: varchar
+	+ quantidade_vagas :: varchar
+	+ nota_corte :: varchar
+	+ quantidade_inscricoes :: varchar
+	+ relacao_candidato_vaga :: varchar
+} 
+class lrn_simulado_enem_proficiencia_tri {
+	+ id_atividade :: varchar
+	+ id_modelo_atividade :: varchar
+	+ id_area_conhecimento :: varchar
+	+ proficiencia_base :: varchar
+	+ tri_maxima :: varchar
+	+ proficiencia_maxima :: varchar
+	+ ano_referencia :: varchar
+	+ edicao_simulado :: varchar
+	+ dia_simulado :: varchar
+} 
+class lrn_simulado_enem_redacao {
+	+ id_modelo_redacao :: varchar
+	+ nome_modelo_redacao :: varchar
+	+ nome_cliente :: varchar
+	+ nome_unidade :: varchar
+	+ nome_nivel_escolaridade :: varchar
+	+ nome_serie :: varchar
+	+ nome_turma :: varchar
+	+ nome_aluno :: varchar
+	+ id_lex :: varchar
+	+ status_redacao :: varchar
+	+ competencia_1 :: varchar
+	+ competencia_2 :: varchar
+	+ competencia_3 :: varchar
+	+ competencia_4 :: varchar
+	+ competencia_5 :: varchar
+	+ pontuacao_aluno :: varchar
+	+ descricao_motivo :: varchar
+	+ url_redacao :: varchar
+} 
+class lrn_source_external_careers {
+	+ id {id_lrn_source_external_careers} :: bigint
+	+ careerid :: bigint
+	+ sourceexternalversionid :: bigint
+	+ sourceexternalgroupid :: bigint
+	+ sourceexternalcampusid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ createdby :: bigint
+	+ updatedby :: bigint
+	+ deletedby :: bigint
+} 
+class lrn_student_activities {
+	+ id {id_lrn_student_activities} :: bigint
+	+ studentid :: bigint
+	+ path :: varchar
+	+ createdat :: timestamp
+	+ studentregistrationid :: bigint
+	+ accesstype :: varchar
+	+ data_partition :: date
+} 
+class lrn_student_planning_application_disciplines {
+	+ id {id_lrn_student_planning_application_disciplines} :: bigint
+	+ studentplanningapplicationid :: bigint
+	+ studentplanningdisciplineid :: bigint
+	+ planningapplicationdisciplineid :: bigint
+	+ studentplanningid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_student_planning_applications {
+	+ id {id_lrn_student_planning_applications} :: bigint
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+	+ studentplanningid :: bigint
+	+ studentplanningchapterid :: bigint
+	+ planningapplicationid :: bigint
+	+ instrumentid :: bigint
+	+ instrumentdisciplineid :: bigint
+	+ instrumenttemplateapplicationid :: bigint
+	+ instrumentquestiongroupid :: bigint
+	+ planningtemplateapplicationid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ instrumentname :: varchar
+	+ instrumentquestiongroupname :: varchar
+} 
+class lrn_student_planning_chapters {
+	+ id {id_lrn_student_planning_chapters} :: bigint
+	+ name :: varchar
+	+ number :: bigint
+	+ studentplanningid :: bigint
+	+ planningtemplatechapterid :: bigint
+	+ planningchapterid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ startdate :: timestamp
+	+ enddate :: timestamp
+} 
+class lrn_student_planning_chart_chapters {
+	+ id {id_lrn_student_planning_chart_chapters} :: bigint
+	+ planningtemplatechapterid :: bigint
+	+ studentplanningchartid :: bigint
+} 
+class lrn_student_planning_chart_disciplines {
+	+ id {id_lrn_student_planning_chart_disciplines} :: bigint
+	+ name :: varchar
+	+ shortname :: varchar
+	+ planningtemplatedisciplineid :: bigint
+	+ studentplanningchartid :: bigint
+	+ themeid :: bigint
+	+ groupid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_student_planning_charts {
+	+ id {id_lrn_student_planning_charts} :: bigint
+	+ chartid :: bigint
+	+ planningtemplateid :: bigint
+	+ planningtemplateplanningid :: bigint
+	+ studentplanningid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_student_planning_discipline_chart_disciplines {
+	+ id {id_lrn_student_planning_discipline_chart_disciplines} :: bigint
+	+ chartid :: bigint
+	+ planningdisciplineid :: bigint
+	+ planningtemplatedisciplineplanningid :: bigint
+	+ studentplanningchartdisciplineid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+} 
+class lrn_student_planning_disciplines {
+	+ id {id_lrn_student_planning_disciplines} :: bigint
+	+ name :: varchar
+	+ timesperweek :: bigint
+	+ shortname :: varchar
+	+ studentplanningid :: bigint
+	+ themeid :: bigint
+	+ groupid :: bigint
+	+ schoolplanningdisciplineid :: bigint
+	+ planningdisciplineid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+} 
+class lrn_student_plannings {
+	+ id {id_lrn_student_plannings} :: bigint
+	+ schoolgradeid :: bigint
+	+ planningid :: bigint
+	+ schoolplanningid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ schoolid :: bigint
+} 
+class lrn_student_registrations {
+	+ id {id_lrn_student_registrations} :: bigint
+	+ name :: varchar
+	+ studentid :: bigint
+	+ registrationid :: bigint
+	+ schoolyearid :: bigint
+	+ schoolgradeid :: bigint
+	+ schoolunitid :: bigint
+	+ active :: tinyint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ enddate :: timestamp
+	+ startdate :: timestamp
+	+ schoolplanningid :: bigint
+	+ schoolid :: bigint
+	+ classroomid :: bigint
+	+ externalid :: varchar
+	+ brandid :: bigint
+} 
+class lrn_student_registrations_backup {
+	+ id {id_lrn_student_registrations_backup} :: bigint
+	+ name :: varchar
+	+ studentid :: bigint
+	+ registrationid :: bigint
+	+ schoolyearid :: bigint
+	+ schoolgradeid :: bigint
+	+ schoolunitid :: bigint
+	+ active :: tinyint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ enddate :: timestamp
+	+ startdate :: timestamp
+	+ schoolplanningid :: bigint
+	+ schoolid :: bigint
+	+ classroomid :: bigint
+	+ externalid :: varchar
+	+ brandid :: bigint
+} 
+class lrn_student_registrations_bkp {
+	+ id {id_lrn_student_registrations_bkp} :: bigint
+	+ name :: varchar
+	+ studentid :: bigint
+	+ registrationid :: bigint
+	+ schoolyearid :: bigint
+	+ schoolgradeid :: bigint
+	+ schoolunitid :: bigint
+	+ active :: tinyint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ enddate :: timestamp
+	+ startdate :: timestamp
+	+ schoolplanningid :: bigint
+	+ schoolid :: bigint
+	+ classroomid :: bigint
+	+ externalid :: varchar
+	+ brandid :: bigint
+} 
+class lrn_teacher_classes {
+	+ id {id_lrn_teacher_classes} :: bigint
+	+ schoolteacherid :: bigint
+	+ classroomid :: bigint
+	+ createdat :: timestamp
+	+ deletedat :: timestamp
+	+ updatedat :: timestamp
+	+ brandid :: bigint
+} 
+class lrn_teachers_class_disciplines {
+	+ id {id_lrn_teachers_class_disciplines} :: bigint
+	+ schoolteacherid :: bigint
+	+ classroomid :: bigint
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ deletedat :: timestamp
+	+ schoolplanningdisciplineid :: bigint
+	+ teacherclassid :: bigint
+} 
+class lrn_themes {
+	+ id {id_lrn_themes} :: bigint
+	+ name :: varchar
+	+ theme_id :: bigint
+	+ created_at :: timestamp
+	+ updated_at :: timestamp
+	+ group_id :: bigint
+	+ is_discipline :: tinyint
+	+ shortname :: varchar
+	+ deletedat :: timestamp
+	+ deletedby :: bigint
+} 
+class lrn_user_types {
+	+ id {id_lrn_user_types} :: bigint
+	+ name :: varchar
+	+ deletedat :: timestamp
+} 
+class lrn_user_types_users {
+	+ id {id_lrn_user_types_users} :: bigint
+	+ usertypeid :: bigint
+	+ sysuserid :: bigint
+} 
+class lrn_users {
+	+ id {id_lrn_users} :: bigint
+	+ password :: varchar
+	+ email :: varchar
+	+ verificationtoken :: varchar
+	+ cpf :: varchar
+	+ createdat :: timestamp
+	+ updatedat :: timestamp
+	+ username :: varchar
+	+ externalid :: varchar
+	+ deletedat :: timestamp
+	+ username_bkp :: varchar
+} 
+class microdados_enem {
+	+ nu_inscricao :: varchar
+	+ nu_ano :: varchar
+	+ tp_faixa_etaria :: varchar
+	+ tp_sexo :: varchar
+	+ tp_estado_civil :: varchar
+	+ tp_cor_raca :: varchar
+	+ tp_nacionalidade :: varchar
+	+ tp_st_conclusao :: varchar
+	+ tp_ano_concluiu :: varchar
+	+ tp_escola :: varchar
+	+ tp_ensino :: varchar
+	+ in_treineiro :: varchar
+	+ co_municipio_esc :: varchar
+	+ no_municipio_esc :: varchar
+	+ co_uf_esc :: varchar
+	+ sg_uf_esc :: varchar
+	+ tp_dependencia_adm_esc :: varchar
+	+ tp_localizacao_esc :: varchar
+	+ tp_sit_func_esc :: varchar
+	+ co_municipio_prova :: varchar
+	+ no_municipio_prova :: varchar
+	+ co_uf_prova :: varchar
+	+ sg_uf_prova :: varchar
+	+ tp_presenca_cn :: varchar
+	+ tp_presenca_ch :: varchar
+	+ tp_presenca_lc :: varchar
+	+ tp_presenca_mt :: varchar
+	+ co_prova_cn :: varchar
+	+ co_prova_ch :: varchar
+	+ co_prova_lc :: varchar
+	+ co_prova_mt :: varchar
+	+ nu_nota_cn :: varchar
+	+ nu_nota_ch :: varchar
+	+ nu_nota_lc :: varchar
+	+ nu_nota_mt :: varchar
+	+ tx_respostas_cn :: varchar
+	+ tx_respostas_ch :: varchar
+	+ tx_respostas_lc :: varchar
+	+ tx_respostas_mt :: varchar
+	+ tp_lingua :: varchar
+	+ tx_gabarito_cn :: varchar
+	+ tx_gabarito_ch :: varchar
+	+ tx_gabarito_lc :: varchar
+	+ tx_gabarito_mt :: varchar
+	+ tp_status_redacao :: varchar
+	+ nu_nota_comp1 :: varchar
+	+ nu_nota_comp2 :: varchar
+	+ nu_nota_comp3 :: varchar
+	+ nu_nota_comp4 :: varchar
+	+ nu_nota_comp5 :: varchar
+	+ nu_nota_redacao :: varchar
+	+ q001 :: varchar
+	+ q002 :: varchar
+	+ q003 :: varchar
+	+ q004 :: varchar
+	+ q005 :: varchar
+	+ q006 :: varchar
+	+ q007 :: varchar
+	+ q008 :: varchar
+	+ q009 :: varchar
+	+ q010 :: varchar
+	+ q011 :: varchar
+	+ q012 :: varchar
+	+ q013 :: varchar
+	+ q014 :: varchar
+	+ q015 :: varchar
+	+ q016 :: varchar
+	+ q017 :: varchar
+	+ q018 :: varchar
+	+ q019 :: varchar
+	+ q020 :: varchar
+	+ q021 :: varchar
+	+ q022 :: varchar
+	+ q023 :: varchar
+	+ q024 :: varchar
+	+ q025 :: varchar
+} 
+class mis_calendar {
+	+ data :: varchar
+	+ week :: bigint
+} 
+class mis_sensedata_acv_clientes_externos {
+	+ customer_group :: varchar
+	+ squad :: varchar
+	+ tipo :: varchar
+	+ escola :: varchar
+	+ cnpj_escola :: varchar
+	+ serie :: varchar
+	+ segmento :: varchar
+	+ total_alunos_contrato :: varchar
+	+ perc_desconto_final :: varchar
+	+ valor :: varchar
+	+ produto :: varchar
+	+ ok_nok :: varchar
+	+ concat :: varchar
+	+ modelo_comercializacao :: varchar
+	+ projecao_fat_contrato :: varchar
+	+ plano_de_pagamento :: varchar
+	+ acv_bimestre_1 :: varchar
+	+ acv_bimestre_2 :: varchar
+	+ acv_bimestre_3 :: varchar
+	+ acv_bimestre_4 :: varchar
+	+ id_original :: varchar
+} 
+class mis_sensedata_baseoportunidade {
+	+ customer_bi_2022 :: varchar
+	+ serie :: varchar
+	+ segmento :: varchar
+	+ produtos :: varchar
+	+ chave :: varchar
+	+ preco_de_tabela :: varchar
+	+ desconto :: varchar
+	+ preco_final :: varchar
+	+ quantidade :: varchar
+	+ total_oportunidade :: varchar
+	+ classificacao :: varchar
+} 
+class mis_sensedata_contratos {
+	+ cnpj :: varchar
+	+ cnpj_pedido :: varchar
+	+ customer_group :: varchar
+	+ id_legacy :: varchar
+	+ id_customer :: varchar
+	+ nome_fantasia :: varchar
+	+ tipo :: varchar
+	+ type :: varchar
+	+ squad :: varchar
+	+ status :: varchar
+	+ contrato_aditivo :: varchar
+	+ paper_contract :: varchar
+	+ auto_renewal :: varchar
+	+ created_on :: varchar
+	+ start_date :: varchar
+	+ end_date :: varchar
+	+ valor_contrato :: varchar
+	+ license_qty :: varchar
+	+ description :: varchar
+	+ model :: varchar
+	+ instalments :: varchar
+	+ cycle :: varchar
+	+ item_sequence :: varchar
+	+ plan :: varchar
+	+ monthly_payment :: varchar
+} 
+class mis_sensedata_fase_cliente {
+	+ cnpj :: varchar
+	+ cnpj_pedido :: varchar
+	+ customer_group :: varchar
+	+ cnxc :: varchar
+	+ id_customer :: varchar
+	+ fase :: varchar
+} 
+class mis_sensedata_nps {
+	+ id_customer :: varchar
+	+ id_legacy :: varchar
+	+ survey_date :: varchar
+	+ ref_date :: varchar
+	+ medium :: varchar
+	+ respondent :: varchar
+	+ role :: varchar
+	+ category :: varchar
+	+ group :: varchar
+	+ score :: varchar
+	+ comments :: varchar
+	+ stage :: varchar
+	+ tags :: varchar
+} 
+class mis_sensedata_produtos_por_serie {
+	+ serie :: varchar
+	+ preco_de_tabela :: varchar
+	+ produto :: varchar
+	+ modalidade :: varchar
+} 
+class mis_sensedata_sponsor {
+	+ cnpj :: varchar
+	+ cnpj_do_pedido :: varchar
+	+ customer_group :: varchar
+	+ cnx_da_escola :: varchar
+	+ id_unico_sense :: varchar
+	+ nome_fantasia :: varchar
+	+ squad :: varchar
+	+ nome_ponto_focal_sponsor :: varchar
+	+ email :: varchar
+	+ telefone :: varchar
+} 
+class tmp_acesso {
+	+ tenantname :: varchar
+	+ schoolname :: varchar
+	+ productname :: varchar
+	+ profile :: varchar(19)
+	+ schooltype :: varchar
+	+ accessdate :: date
+	+ licencas :: varchar
+	+ acessos :: varchar
+} 
+class tmp_engajamento {
+	+ username :: varchar
+	+ nomemarca :: varchar
+	+ schooltype :: varchar
+	+ nomeescola :: varchar
+	+ anomatricula :: varchar(14)
+	+ periodo :: date
+	+ ultimoacessomatricula :: date
+	+ dataacesso :: date
+	+ acessossemanais :: bigint
+} 
+class zen_groups {
+	+ groups :: Array_12
+	+ end_time :: bigint
+} 
+class zen_jira_link {
+	+ links :: Array_01
+} 
+class zen_organization {
+	+ organizations :: Array_10
+	+ end_time :: bigint
+} 
+class zen_organization_fields {
+	+ organization_fields :: Array_05
+	+ end_time :: bigint
+} 
+class zen_ticket_fields {
+	+ ticket_fields :: Array_08
+	+ end_time :: bigint
+} 
+class zen_ticket_forms {
+	+ ticket_forms :: Array_02
+	+ end_time :: bigint
+} 
+class zen_tickets {
+	+ tickets :: Array_09
+	+ end_time :: bigint
+} 
+class zen_users {
+	+ users :: Array_11
+	+ end_time :: bigint
+} 
